@@ -1,0 +1,96 @@
+
+.dropdown-w
+	position relative
+	&.dropdown-w_active
+		.dropdown-w__dropdown-list
+			z-index 1
+			// opacity 1
+			visibility visible
+			opacity 1
+			// clip rect(0 auto 100% 0)
+			tr(all .1s ease)
+			
+	&__dropdown
+		resetbutton()
+		margin-right 47px
+		padding-top 7px
+		padding-bottom 6px
+		display flex
+		align-items center
+		color #0085ff
+		tr(color .3s ease)
+		+r($m)
+			margin-right 10px
+		&:hover
+			color darken(#0085ff, 10)
+			tr(color .3s ease)
+			.dropdown-w__dropdown-icon
+				path
+					fill darken(#0085ff, 10)
+					tr(fill .3s ease)
+
+	&__dropdown-list
+		position absolute
+		z-index 0
+		top 100%
+		left 50%
+		padding-top 5px
+		padding-bottom 5px
+		background-color #fff
+		// background-color #000 
+		border-radius 8px
+		width 160px
+		visibility hidden
+		opacity 0
+		transform translateX(-50%)
+		box-shadow 0 0 10px rgba(0, 0, 0, 0.3)
+		tr(all .1s ease)
+		
+		&:after
+			position absolute
+			top -4px
+			left 50%
+			content '' 
+			width 0
+			height 0
+			border-style solid
+			border-width 0 4px 4px 4px
+			border-color transparent transparent #ffffff transparent
+			transform translateX(-50%)
+	// &__dropdown-item
+		
+	&__dropdown-item_title
+		padding-top 7px
+		padding-right 10px 
+		padding-bottom 6px
+		padding-left 10px
+		color #97adc6
+		font-size 14px
+		font-weight 400
+		text-transform uppercase
+		
+	&__dropdown-icon
+		margin-left 11px
+		width 12px
+		height 8px
+		path
+			fill #0085FF
+			tr(fill .3s ease)
+		
+	&__dropdown-link
+		padding-top 7px
+		padding-right 10px
+		padding-bottom 7px
+		padding-left 10px
+		display block
+		// color #0085ff
+		color #1a344b 
+		
+		padding-bottom 10px
+		text-decoration none
+		tr(all .3s ease)
+			
+		&:hover
+			background-color #edf3f8
+			tr(all .3s ease)
+	

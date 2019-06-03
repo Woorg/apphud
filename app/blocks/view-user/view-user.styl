@@ -1,0 +1,334 @@
+.view-user
+	display flex	
+	+r($tL)
+		flex-direction column	
+	&__content
+		margin-right 30px
+		padding-top 15px
+		width ratio-percentage(540, 920)
+		+r($tL)
+			margin-right 0
+			order 1
+			width 100%
+	&__side
+		padding-top 15px
+		width ratio-percentage(350, 920) 
+		+r($tL)
+			order -1
+			width 100%
+	&__stats
+		margin-bottom 25px
+		display flex
+		justify-content space-between
+		align-items flex-start
+		+r($t)
+			flex-wrap wrap
+	&__stats-item
+		padding-top 12px
+		padding-right 14px
+		padding-bottom 16px
+		padding-left 30px
+		// flex-grow 1
+		width ratio-percentage(160, 540)
+		border-radius 8px
+		background-color #ffffff 
+		+r($t)
+			margin-bottom 15px
+			width 100%
+		&:last-child
+			+r($t)
+				margin-bottom 0
+	&__stats-top
+		position relative
+		margin-bottom 5px
+		
+	&__stats-title
+		font-size 14px
+		font-weight 700
+
+	&__stats-icon
+		position absolute
+		top 50%
+		left -21px
+		transform translateY(-50%)
+		
+	&__stats-val
+		font-size 18px
+		font-weight 700
+
+	&__prop
+		padding-top 20px
+		padding-left 30px
+		padding-right 0
+		padding-bottom 30px
+		background #fff 
+	&__prop-top
+		position relative
+		margin-bottom 20px
+
+	&__prop-title
+		font-size 18px
+		font-weight 700	
+	&__prop-icon
+		position absolute
+		top 50%
+		left -21px
+		transform translateY(-50%)		
+		
+	
+	// &__prop-list
+		
+
+	&__prop-item
+		border-bottom 1px solid #edf3f8
+		padding-top 10px
+		padding-bottom 10px
+		display flex
+		align-items center
+		font-weight 700
+
+	&__prop-term
+		max-width 160px
+		width 100%
+		font-size 14px
+		
+	&__prop-desc
+		font-size 14px
+		font-weight 400
+		
+
+	&__prop-country 
+		padding-right 2px
+		display inline-block
+		vertical-align baseline
+		font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" 
+		
+
+	&__subscribe
+		padding-top 0
+		padding-right 30px
+		padding-bottom 20px
+		padding-left 30px
+		background #fff
+		border-radius 8px
+		
+	&__subscribe-top
+		position relative
+		padding-top 10px
+				
+	&__subscribe-payment
+		position absolute
+		// top 50%
+		top 13px
+		left -19px
+		width 15px
+		height 14px
+		// transform translateY(-50%)
+		
+	&__subscribe-title
+		font-size 18px
+		font-weight 700	
+
+	&__subscribe-dropdown
+		position relative
+		display inline-block
+		vertical-align top
+		.dropdown-w__dropdown
+			padding-top 0
+			padding-bottom 0
+			color #0085ff
+			font-size 18px
+			font-weight 700
+	
+	&__subscribe-list
+		margin-top 20px
+		margin-left 10px
+
+	&__subscribe-item
+		position relative
+		// border-left 2px solid transparent
+		padding-left 20px
+		// padding-bottom 40px
+		min-height 82px
+		background #fff
+		&:before,
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ''
+		&:after
+			background transparent 
+		// &:before
+		// 	z-index 0
+		&:after
+			top -100%
+			height 100%
+			width 2px
+		&:first-child
+			&:after
+				visibility hidden
+				display none
+				opacity 0
+
+		&:last-child
+			padding-bottom 40px
+			min-height 10px
+				
+	&__subscribe-item_now
+		&:after
+			background #20bf55
+			
+		&:before
+			z-index 1
+			top 0
+			left -5px
+			width 12px
+			height 12px
+			background-color #20bf55
+			border-radius 50%
+			
+	&__subscribe-item_now-nopay
+		&:before
+			background #97ADC6
+
+	&__subscribe-item_now-active
+		
+		&:before
+			background #20bf55
+	
+			
+	&__subscribe-item_now-cancel
+		
+		&:before
+			background #ff0c46
+
+
+	&__subscribe-item_started
+		
+		&:after
+			background #20bf55 
+			
+		.view-user__subscribe-status
+			font-weight normal 
+			span
+				padding-right 5px
+				font-weight 700 
+				
+
+	
+	&__subscribe-item_expired
+		&:after
+			background #97adc6
+			
+	&__subscribe-item_expired-cancel
+		&:after
+			background #ff0c46
+
+	&__subscribe-item_cancelled
+		&:after
+			background #FF0C46
+			
+
+	&__subscribe-item_cancelled-active
+		&:after
+			background #20bf55
+			
+	&__subscribe-item_renew
+		&:after
+			background #20bf55
+		
+		.view-user__subscribe-status
+			font-weight normal 
+			span
+				padding-right 5px
+				font-weight 700 
+		
+	&__subscribe-item_trial
+		&:after
+			background #f6921d 
+			
+		
+		.view-user__subscribe-status
+			font-weight normal 
+			span
+				padding-right 5px
+				font-weight 700 
+				
+	&__subscribe-item_trial-exp
+		&:after
+			background #97adc6
+		
+	&__subscribe-item_usercreate
+		&:after
+			background #97adc6
+
+		
+	&__subscribe-iicon
+		position absolute
+		z-index 1
+		top 0
+		left -11px
+		background #FFF
+		border-radius 50% 
+
+	&__subscribe-date
+		margin-bottom 3px
+		font-size 10px
+		font-weight 400
+
+	&__subscribe-status
+		margin-bottom 5px
+		font-size 14px
+		font-weight 700
+		
+	&__subscribe-price
+		margin-bottom 5px
+		color #20bf55
+		font-family Ubuntu
+		font-size 14px
+		font-weight 700
+		
+	&__subscribe-meta
+		display flex
+		color #1a344b
+		font-size 10px
+		font-weight 400
+
+	&__subscribe-product,
+	&__subscribe-expire,
+	&__subscribe-cost,
+	&__subscribe-support
+
+		position relative
+		margin-right 10px
+		padding-left 14px
+		.view-user__subscribe-micon
+			stroke none
+
+	&__subscribe-expire
+		.view-user__subscribe-micon
+			stroke #97adc6
+
+	&__subscribe-cost
+		margin-right 0
+		display flex
+
+	&__subscribe-micon
+		position absolute
+		top 50%
+		left 0
+		transform translateY(-50%)
+		stroke #97adc6
+		
+	&__subscribe-support
+		margin-top 5px
+		color #1a344b
+		font-size 10px
+		font-weight 400
+		.view-user__subscribe-micon
+			stroke none
+			
+	&__subscribe-costgt
+		padding-right 3px
+		color #F6921D

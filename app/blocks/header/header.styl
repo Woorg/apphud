@@ -1,0 +1,154 @@
+.header
+	padding-top 10px
+	padding-bottom 10px
+	display flex
+	background #fff
+	
+			
+	&__add
+		resetbutton()
+		padding-top 7px
+		padding-bottom 6px
+		display flex
+		align-items center
+		color #20bf55
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			color darken(#20bf55, 10)
+			tr(all .3s ease)
+			.header__add-icon
+				path 
+					fill darken(#20bf55, 10)
+					tr(fill .3s ease)
+				
+
+	&__add-icon
+		margin-right 6px
+		width 14px
+		height 14px
+		path 
+			fill #20bf55
+			tr(fill .3s ease)
+	&__controls
+		margin-left auto
+		max-width 177px
+		width 100%
+		display flex
+		align-items center
+		+r($tL)
+			max-width 116px
+	&__git,
+	&__help,
+	&__git-icon
+	&__help-icon
+		width 24px
+		height 24px
+		// background-color #1a344b
+		
+	// &__git-icon,
+	// &__help-icon
+	// 	background-color transparent 
+		
+	// &__git-icon
+		
+	&__help-icon
+		margin-left 17px
+		
+		
+
+	&__user-pic
+		margin-left auto
+		width 30px
+		height 30px
+		border-radius 50%
+	&__user-photo
+		border-radius 50%
+		
+
+
+.dropdown-w
+	position relative
+	&.dropdown-w_active
+		.dropdown-w__dropdown-list
+			z-index 1
+			// opacity 1
+			visibility visible
+			opacity 1
+			// clip rect(0 auto 100% 0)
+			tr(all .1s ease)
+			
+	&__dropdown
+		resetbutton()
+		margin-right 47px
+		padding-top 7px
+		padding-bottom 6px
+		display flex
+		align-items center
+		color #0085ff
+		tr(color .3s ease)
+		+r($m)
+			margin-right 10px
+		&:hover
+			color darken(#0085ff, 10)
+			tr(color .3s ease)
+			.dropdown-w__dropdown-icon
+				path
+					fill darken(#0085ff, 10)
+					tr(fill .3s ease)
+
+	&__dropdown-list
+		position absolute
+		z-index 0
+		top 100%
+		left 50%
+		padding-top 5px
+		padding-bottom 5px
+		background-color #fff
+		// background-color #000 
+		border-radius 8px
+		width 160px
+		visibility hidden
+		opacity 0
+		transform translateX(-50%)
+		box-shadow 0 0 10px rgba(0, 0, 0, 0.3)
+		tr(all .1s ease)
+		
+		&:after
+			position absolute
+			top -4px
+			left 50%
+			content '' 
+			width 0
+			height 0
+			border-style solid
+			border-width 0 4px 4px 4px
+			border-color transparent transparent #ffffff transparent
+			transform translateX(-50%)
+	// &__dropdown-item
+		
+	&__dropdown-icon
+		margin-left 11px
+		width 12px
+		height 8px
+		path
+			fill #0085FF
+			tr(fill .3s ease)
+		
+	&__dropdown-link
+		padding-top 7px
+		padding-right 10px
+		padding-bottom 7px
+		padding-left 10px
+		display block
+		// color #0085ff
+		color #1a344b 
+		
+		padding-bottom 10px
+		text-decoration none
+		tr(all .3s ease)
+			
+		&:hover
+			background-color #edf3f8
+			tr(all .3s ease)
+	

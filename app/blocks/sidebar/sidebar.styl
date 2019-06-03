@@ -1,0 +1,110 @@
+.sidebar
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	padding-top 30px
+	padding-left 10px
+	padding-right 10px
+	width 175px
+	background-color #1a344b
+	color #fff 
+	tr(width .3s ease)
+	+r($tL)
+		width 40px
+		tr(width .3s ease)
+	&__logo
+		margin-bottom 30px
+		+r($tL)
+			display none
+	&__sidenav
+		margin-bottom 30px
+		
+
+
+	&__warning
+		+r($tL)
+			display none
+		
+
+.logo 
+	display inline-block
+	color #ffffff
+	font-family $n
+	font-size 20px
+	font-weight 700
+	text-decoration none
+	+r($tL)
+		display none
+
+.sidenav
+	
+	&__list
+		margin-left -10px
+		margin-right -10px
+
+	// &__item
+		
+	&__item_active
+		.sidenav__link
+			background-color #0085ff
+			tr(background-color .3s ease)
+			
+	&__link
+		position relative
+		padding-top 12px
+		padding-left 31px
+		padding-bottom 11px
+		display block
+		background #1a344b
+		color #ffffff
+		text-decoration none
+		tr(background-color .3s ease)
+		+r($tL)
+			text-indent -9999px
+	&__icon
+		position absolute
+		top 50%
+		left 10px
+		width 16px
+		height 16px
+		fill #fff
+		transform translateY(-50%)
+		
+
+.warning
+	padding-top 10px
+	padding-right 10px
+	padding-bottom 10px
+	padding-left 10px
+	
+	background-color #000000
+	border-radius 8px
+	&__top
+		margin-bottom 11px
+		display flex
+	&__icon
+		width 13px
+		height 13px
+		fill #ffffff
+	&__title
+		margin-left 6px
+		font-weight 700 
+	
+	&__list
+		font-size 10px
+		
+	&__item
+		position relative
+		margin-bottom 10px
+		&:before
+			margin-right 2px
+			content '–'
+	&__link
+		color #0085ff
+		text-decoration none
+		tr(color .3s ease)
+		&:hover
+			color lighten(#0085ff, 10)
+			tr(color .3s ease)
+			

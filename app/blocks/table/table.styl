@@ -1,0 +1,164 @@
+.table
+	border none
+	border-collapse collapse
+	width 100%
+	
+	// display table
+
+	&__header
+		.table__cell
+			padding-top 13px
+			padding-bottom 13px
+			background-color #edf3f8
+			font-size 12px
+			font-weight 700
+			text-transform uppercase
+			text-align left
+	&__header-text
+		position relative
+		padding-right 9px
+		cursor pointer
+		&:after,
+		&:before
+			position absolute
+			right -9px
+			content ''
+			width 0
+			height 0
+			border-style solid
+		&:after
+			top 3px
+			border-width 0 4px 4px 4px
+			border-color transparent transparent #97adc6 transparent 
+			
+		&:before
+			bottom 3px
+			border-width 4px 4px 0 4px
+			border-color #97adc6 transparent transparent transparent
+
+	&__row
+		border none
+		border-bottom 1px solid #edf3f8
+
+	&__cell
+		border-bottom 1px solid #edf3f8
+		padding-top 10px
+		padding-right 15px
+		padding-left 15px
+		padding-bottom 10px
+		max-width 240px 
+		vertical-align top
+		text-overflow ellipsis 
+		background #fff
+		tr(background .3s ease) 
+		&.sorting-asc
+			.table__header-text
+				color #0085ff 
+				&:after
+					border-color transparent transparent #0085ff transparent 
+					top auto
+					bottom calc(50% - 2px)	
+				&:before
+					display none
+
+		&.sorting-desc
+			.table__header-text
+				color #0085ff 
+				&:after
+					display none
+				&:before
+					border-color #0085ff transparent transparent transparent
+					top calc(50% - 2px)
+					bottom auto	
+					
+	&__cell_active
+		// background #edf3f8 
+		.table__subscription-item
+			margin-bottom 10px
+			display block
+		.table__subscription-title
+			display block
+					
+	&__body
+		.table__row
+			&:hover
+				.table__cell
+					background #edf3f8
+					tr(background .3s ease)
+
+
+	.table__row_active
+		.table__cell
+			background #edf3f8
+			tr(background .3s ease)	
+			
+					
+	// &__subscription
+		
+	&__subscription-item
+		// margin-bottom 10px
+		display none
+		&:first-child
+			display block
+		
+	&__subscription-title
+		margin-bottom 5px
+		display none
+
+
+.badge
+	display flex
+	align-items center
+	color #ffffff
+	font-size 14px
+	font-weight 400
+	&_trial
+		.badge__text
+			background-color #f6921d
+		.badge__icon
+			fill #ff0c46
+	&_active
+		.badge__text
+			background-color #20bf55
+		.badge__icon
+			fill #20bf55
+	&_none
+		.badge__text
+			background-color #97adc6
+	&_exp
+		.badge__text
+			background-color #ff0c46
+		.badge__icon
+			fill #ff0c46
+	&_grace
+		.badge__text
+			background-color #006acc
+		.badge__icon
+			fill #ff0c46
+
+	&__text
+		margin-right 5px
+		padding 5px
+		border-radius 8px
+
+	&__icon
+		width 15px
+		height 14px
+	&__autorenew
+		margin-left 25px
+		display flex
+	&__autorenew_on
+		.badge__autorenew-title
+			color #20bf55
+			font-size 14px
+			font-weight 400
+	&__autorenew_off
+		.badge__icon
+			fill #ff0c46
+		.badge__autorenew-title
+			color #ff0c46
+			font-size 14px
+			font-weight 400
+
+	&__autorenew-title
+		margin-left 5px
